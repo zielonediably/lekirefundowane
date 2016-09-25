@@ -19,3 +19,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License." WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
 language governing permissions and limitations under the License. 
+
+Wymagania Techniczne:
+1. Ubuntu 16.04 LTE
+2. Nginx 11+
+3. Postgresql 9.5+
+4. przeglądarka zgodna z html5,css3
