@@ -1,4 +1,4 @@
-# lekirefundowane
+# Refleks - leki refundowane
 Copyright 2016 "Zielone Diabły"
 Licensed under the CC BY-SA 3.0 (the "License"); you may not use this file except in
 compliance with the License. You may obtain a copy of the License at
