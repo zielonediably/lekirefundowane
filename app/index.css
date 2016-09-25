@@ -1,0 +1,190 @@
+*,
+*::after,
+*::before {
+    position: static;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    overflow: hidden;
+    z-index: 0;
+    float: none;
+    clear: none;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    font: normal 400 100%/1.4 -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans","Helvetica Neue", sans-serif;    
+    color: rgb(51, 51, 51);
+    background: transparent;
+}
+
+:root {
+    position:absolute;
+    top:0;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: auto;
+}
+
+:root > head,
+:root dialog,
+:root template,
+:root script,
+:root datalist,
+:root menu {
+    display: none;
+}
+
+body {
+    position: static;
+    margin: 12rem auto 2rem auto;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12rem;
+    padding-left: 4rem; 
+    background: url(logo.png) top center no-repeat; 
+}
+
+form fieldset {
+    margin-top:2rem;
+}
+
+form legend {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+form input {
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}
+
+form input[type="text"] {
+    border-bottom: 1px solid rgba(51,204,255,1);
+    width: 50%;
+    line-height: 1.6;
+}
+
+form input[type="text"]:focus:valid {
+    color:rgb(0,153,0);
+}
+
+
+form input[type="text"]:focus::invalid {
+    color:rgb(153,0,0);
+}
+
+
+form input[type="submit"] {
+    background-color: rgba(51,51,255,1);
+    padding:1rem;
+    color:rgb(255,255,255);
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:active {
+    cursor: pointer;
+    background-color: rgba(51,51,255,0.8);    
+}
+
+form input[type="checkbox"] + label {
+    height: 4rem;
+}
+
+form input:not([autofocus]):not([type="submit"]) {
+    display: none;
+}
+
+form input[autofocus] ~ label {
+    display: none;
+}
+
+form input[autofocus] + input[type="checkbox"] + label {
+    display: block;
+}
+
+form input[type="checkbox"] + label[for] {
+    cursor: pointer; 
+}
+
+form input[type="checkbox"]:checked + label,
+form input[type="checkbox"]:checked + label + label,
+form input[type="checkbox"]:checked + label + label + input,
+form input[type="checkbox"]:checked + label + label + input + input + label {
+    display: block;
+}
+
+
+
+label[for="plus75"] {
+        color:rgba(51,51,255,1);
+        font-size: 1rem;
+}
+
+input#plus75 + label[for="plus75"]:after {
+    content:"\002610";
+    font-size: 2rem;
+    color:rgba(51,51,255,1);
+}
+
+input#plus75:checked + label[for="plus75"]:after {
+    content:"\002611";
+}
+
+input[type="checkbox"] + label[for^="wyswietl"]::before {
+    content:"+";
+    font-size: 2rem;
+    color:rgba(51,51,255,1); 
+}
+
+input[type="checkbox"]:checked + label[for^="wyswietl"]::before {
+    content:"-";
+    font-size: 2rem;
+}
+
+fieldset#twoja-recepta {
+    width:50%;
+    float:left;
+}
+
+fieldset#propozycja-recepty {
+    width:50%;
+    float:left;
+}
+
+h1#twoja-kwota,
+h1#proponowana-kwota {
+    font-weight: bold;
+}
+
+h1#oszczedzona-kwota {
+    font-weight: bold;
+    color:rgb(0,153,0);
+    font-size: 2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2rem;
+    padding-left: 4rem;
+}

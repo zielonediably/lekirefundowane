@@ -1,45 +1,74 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Refleks</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="index,follow" />
+    <meta name="language" content="pl">
+    <meta name="description" content="Wyszukiwarka, porównywarka leków" />
+    <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <header></header>
+    <main id="main">
+        <form id="search" name="Wyszukiwarka" title="Wyszukiwarka, porównywarka leków" method="GET">
+            <fieldset name="parameters">
+                <legend>Wyszukiwarka:</legend>
 
-<html>
-	<head>
-		<title>Leki refundowane</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="C:\Users\HP\Desktop\lekirefundowane\main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
-		
-			<header>
-				
-					
-				<nav class="logo">
-					<span>LOGO</span>
-				</nav>
-					
-				<nav class="searchBox">
-                    <h2>Wyszukiwarka leków</h2>
-					<nav id="form1">
-                    <form>
-                        <input type="text" id="form2" placeholder="Wpisz słowo kluczowe..." required></br>
-						<input type="text" id="form3" placeholder="Wpisz słowo kluczowe..." required></br>
-						<input type="text" id="form4" placeholder="Wpisz słowo kluczowe..." required></br>
-						<input type="text" id="form5" placeholder="Wpisz słowo kluczowe..." required></br>
-						<input type="text" id="form6" placeholder="Wpisz słowo kluczowe..." required>
-						<input type="image" id="lupa" src="lupa.svg"> </br> 
-                        
-                    </form>
-					</nav>
-                </nav>
+                <input type="checkbox" name="plus75" id="plus75"/>
+                <label for="plus75">Pacjent ma 75+</label>
 
+                <label for="lek1">Nazwa leku na recepcie:</label>
+                <input list="search-list" type="text" id="lek1" name="lek1" title="Podaj nazwę leku" autofocus tabindex="1" />
+                
+                <input type="checkbox" id="wyswietl-lek2" title="Ukryj / Pokaż kolejną pozycję" />
+                <label for="wyswietl-lek2"></label>
 
+                <label for="lek2">Nazwa leku na recepcie:</label>                
+                <input list="search-list" type="text" id="lek2" name="lek2" title="Podaj nazwę leku" tabindex="2" />
+                
+                <input type="checkbox" id="wyswietl-lek3" title="Ukryj / Pokaż kolejną pozycję" />
+                <label for="wyswietl-lek3"></label>
+                
+                <label for="lek3">Nazwa leku na recepcie:</label>                  
+                <input list="search-list" type="text" id="lek3" name="lek3" title="Podaj nazwę leku" tabindex="3" />
+                
+                <input type="checkbox" id="wyswietl-lek4" title="Ukryj / Pokaż kolejną pozycję" />
+                <label for="wyswietl-lek4"></label>
 
+                <label for="lek4">Nazwa leku na recepcie:</label>                  
+                <input list="search-list" type="text" id="lek4" name="lek4" title="Podaj nazwę leku" tabindex="4"/>
 
-			
-			</header>
-
-	
-	</body>
+                <input type="checkbox" id="wyswietl-lek5" title="Ukryj / Pokaż kolejną pozycję" />
+                <label for="wyswietl-lek5"></label>
+                
+                <label for="lek5">Nazwa leku na recepcie:</label>                 
+                <input list="search-list" type="text" id="lek5" name="lek5" title="Podaj nazwę leku" tabindex="5" />
+                
+                <input type="submit" value="Wyszukaj" title="Kliknij, aby wyszukać" tabindex="6"/>                                               
+            </fieldset>
+            <fieldset id="twoja-recepta">
+                <legend>Twoja Recepta:</legend>
+            </fieldset>
+            <fieldset id="resources">
+                <legend>Propozycja Recepty:</legend>
+            </fieldset>
+            <fieldset>
+                <br/>
+                <h1 id="twoja-kwota">Twoja Kwota [PLN]: 0.00</h1>
+                <h1 id="proponowana-kwota">Proponowana Kwota [PLN]: 0.00</h1>
+                <h1 id="oszczedzona-kwota">Oszczędność [PLN]: 0.00</h1>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <a href="#" rel="license" title="Licencja">2016 - Hackathon</a>
+    </footer>
+    <dialog id="ranking">
+    </dialog>
+    <datalist id="search-list">
+    </datalist>
+</body>
+<script defer src="index.js"></script>
 </html>
